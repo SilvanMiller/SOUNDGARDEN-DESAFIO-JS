@@ -65,21 +65,43 @@ form.onsubmit = async (evento) => {
 
 if (window.location.pathname == '/admin.html') {
 
-const optionsGET = {
-    method: "GET",
-    body: JSON.stringify(),
-    headers: {
-        "Content-Type": "application/json",
-    },
+    const url = `https://xp41-soundgarden-api.herokuapp.com/events/`;
+    let button1 = document.getElementById("btn1")
+ let nomeEvento1 = document.getElementById("nomeevento1").textContent;
+ let nomeEvento2 = document.getElementById("novoevento2").textContent;
+ let nomeEvento3 = document.getElementById("novoevento3").textContent;
+
+button1.onclick(fetchApi)
+
+    function fetchApi () {
+        fetch(url)
+        .then(response => response.json())
+        .then(data => { 
+            data.map((item => {
+                if (item.name == nomeEvento2) {
+                    let idItem = item._id
+
+                  
+                    console.log(idItem)
+    
+                }
+            }))
+    
+    
+    
+    
+    
+    
+    
+            
+               
+        })
+    
+    
+        
+        
+       
+    }
+    fetchApi()
+
 }
-
-const editarbtn = document.querySelector('.btn-secondary')
-const nomeevento = (document.querySelector(".nomeevento"))
-const urleditar = `https://xp41-soundgarden-api.herokuapp.com/events/nome=${nomeevento}`
-const idpelonome = fetch (`${urleditar}`, optionsGET)
-
-editarbtn.onclick = () => {
-    console.log("teste");
-  }
-}
-
