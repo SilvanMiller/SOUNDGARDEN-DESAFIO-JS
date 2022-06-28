@@ -1,4 +1,3 @@
-
 // REQUISIÇÃO GET PARA PEGAR DADOS DO EVENTO DE ID COMPATÍVEL COM O URL
 
 const url = `https://xp41-soundgarden-api.herokuapp.com/events/`;
@@ -26,46 +25,36 @@ function fetchApi () {
                 document.querySelector("#lotacao").value = item.number_tickets
                 
 
-            } 
-            
+            }
         }))
     })
 }
 fetchApi()
 
 
-// REQUISIÇÃO PUT PARA EDITAR DADOS DO EVENTO ATRAVÉS DO FORM ELEMENTS
+// REQUISIÇÃO DELETE PARA APAGAR O EVENTO DA BASE DE DADOS
+
 const urlToPut = 'https://xp41-soundgarden-api.herokuapp.com/events/';
 const form = document.querySelector("form")
 form.onsubmit = async (evento) => {
-    evento.preventDefault();
+    evento.preventDefault()
+    
     try {
        
-        const eventoAtualizado = {
-            name : form.elements['nome'].value,
-            poster: "https://i.imgur.com/fQHuZuv.png",
-            attractions : [ 
-                form.elements['atracoes'].value
-            ],
-            description : form.elements['descricao'].value,
-            scheduled : new Date(form.elements['data'].value),
-            number_tickets : form.elements['lotacao'].value
-        };
-
+        
         
 
         const options = {
-            method: "PUT",
-            body: JSON.stringify(eventoAtualizado),
+            method: "DELETE",
+            body: "",
             headers: {
                 "Content-Type": "application/json",
             },
         }
 
         const resposta = await fetch(urlToPut + idParam, options);
-        const conteudoResposta = await resposta.json();
-        console.log(conteudoResposta)
         console.log(resposta.status)
+        
        
     }catch (error) {
         console.log(error);
