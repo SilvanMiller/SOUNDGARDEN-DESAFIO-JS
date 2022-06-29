@@ -100,7 +100,7 @@ form3.onsubmit = async (evento) => {
             owner_name: form3.elements['nome'].value,
             owner_email: form3.elements['email'].value,
             number_tickets: form3.elements['quantidade'].value,
-            event_id: '62bb3a17fbed55d808f13f29'
+            event_id: '62bb3a15fbed55d808f13f27'
 
 
         };
