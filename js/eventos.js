@@ -51,6 +51,9 @@ form.onsubmit = async (evento) => {
         const conteudoResposta = await resposta.json();
         console.log(conteudoResposta);
         console.log(resposta)
+        if (resposta.status == 201) {
+            alert('Evento Criado com sucesso!')
+        }
 
     } catch (error) {
         console.log(error);
