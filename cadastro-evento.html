@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-Br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -36,18 +36,16 @@
               <use xlink:href="#bootstrap"></use>
             </svg>
             <span class="fs-4 px-5">
-              <img
-                src="img/Sound-logo.png"
-                alt="Gama Lounge"
-                class="img-responsive"
-              />
+              <a href="admin.html">
+                <img src="img/Sound-logo.png" alt="Gama Lounge" title="Voltar ao painel adm "       class="img-responsive"/>
+              </a>
             </span>
           </a>
           <p class="text-center">painel administrativo</p>
           <hr />
           <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-              <a href="#" class="nav-link active" aria-current="page">
+              <a href="eventos.html" class="nav-link active btn-primary efeito" aria-current="page">
                 Eventos
               </a>
             </li>
@@ -59,7 +57,7 @@
               <a href="#" class="nav-link link-dark"> Usuários </a>
             </li>
             <li>
-              <a href="index.html" class="nav-link link-dark"> Landing Page </a>
+              <a href="index.html" class="nav-link link-dark"> Início </a>
             </li>
           </ul>
           <hr />
@@ -71,56 +69,40 @@
           <div>
             <!-- - cadastro de evento (nome, atrações, descrição, horário, data, numero de ingressos) -->
             <form class="col-6">
+
               <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nome"
-                  aria-describedby="nome"
-                />
+                <input type="text" class="form-control" id="nome"
+                  aria-describedby="nome" />
               </div>
+
               <div class="mb-3">
                 <label for="atracoes" class="form-label">Atrações</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="atracoes"
-                  aria-describedby="atracoes"
-                />
+                <input type="text" class="form-control" id="atracoes"
+                  aria-describedby="atracoes" />
                 <small>insira o nome dos artistas separados por vírgula</small>
               </div>
+
               <div class="mb-3">
                 <label for="descricao" class="form-label">Descrição</label>
-                <textarea
-                  name="descricao"
-                  id="descricao"
-                  class="form-control"
-                  rows="5"
-                ></textarea>
+                <textarea type="text" name="descricao" id="descricao"             class="form-control" rows="5" >
+                </textarea>
               </div>
+
               <div class="mb-3">
                 <label for="data" class="form-label">Data</label>
-                <input
-                  type="datetime"
-                  name="data"
-                  id="data"
-                  class="form-control"
-                  placeholder="MM/DD/YY 00:00"
-                />
+                <input type="datetime-local" name="data" id="data"                class="form-control" placeholder="MM/DD/YY 00:00" />
               </div>
+
               <div class="mb-3">
-                <label for="lotacao" class="form-label"
-                  >Lotação (número de ingressos disponiveis)</label
-                >
-                <input
-                  type="number"
-                  class="form-control"
-                  id="lotacao"
-                  aria-describedby="lotacao"
-                />
+                <label for="lotacao" class="form-label">
+                  Lotação (número de ingressos disponiveis)
+                </label>
+                <input type="number" class="form-control" id="lotacao"
+                  aria-describedby="lotacao" />
               </div>
-              <button type="submit" class="btn btn-primary">enviar</button>
+
+              <button type="submit" class="btn btn-primary efeito">enviar</button>
             </form>
           </div>
         </main>
