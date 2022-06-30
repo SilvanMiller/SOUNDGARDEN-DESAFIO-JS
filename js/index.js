@@ -14,7 +14,7 @@ form1.onsubmit = async (evento) => {
             owner_name: form1.elements['nome'].value,
             owner_email: form1.elements['email'].value,
             number_tickets: form1.elements['quantidade'].value,
-            event_id: '62bb4163fbed55d808f14044'
+            event_id: '62be151edaf3bbc73cabfb2a'
 
         };
 
@@ -100,7 +100,7 @@ form3.onsubmit = async (evento) => {
             owner_name: form3.elements['nome'].value,
             owner_email: form3.elements['email'].value,
             number_tickets: form3.elements['quantidade'].value,
-            event_id: '62bdc663daf3bbc73cabf164'
+            event_id: '62be17abdaf3bbc73cabfb81'
 
 
         };
