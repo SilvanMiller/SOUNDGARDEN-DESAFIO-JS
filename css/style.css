@@ -26,6 +26,16 @@ aside {
     background-color: #C2185B;
     border-color: #C2185B;
 }
+.btn-primary.efeito:hover{
+    background: linear-gradient(to right, #c2185b 50%, #0d6efd 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 300ms ease-out;
+}
+.form-control{
+    border-color: #C2185B;
+    resize: none;
+}
 
 main.login {
     width: 400px;
@@ -48,4 +58,42 @@ footer nav ul{
 
 footer nav ul li  {
     padding: 10px;
+}
+
+.row aside a svg {
+    display: none;
+}
+
+@media screen and (min-width: 946px) and (max-width: 1150px) {
+    .row aside img {
+        width: 100px !important;
+        height: auto !important;
+    }
+}
+@media screen and (max-width: 945px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .row aside {
+        width: 100vw;
+        margin-bottom: -320px;
+    }
+    .row aside img {
+        width: 140px;
+        height: auto;
+    }
+    .row aside a {
+        margin: 0 auto;
+    }
+    .row aside a svg {
+        display: none;
+    }
+    .row aside ul {
+        margin-bottom: 0 !important;
+        text-align: center;
+    }
+    main {
+        width: 100vw !important;
+    }
 }
