@@ -22,7 +22,7 @@ function fetchApi () {
                 document.querySelector("#nome").value = item.name
                 document.querySelector("#atracoes").value = item.attractions
                 document.querySelector("#descricao").value = item.description
-                document.querySelector("#data").value = item.scheduled
+                document.querySelector("#data").value = item.scheduled.split("T")[0]
                 document.querySelector("#lotacao").value = item.number_tickets
                 
 
